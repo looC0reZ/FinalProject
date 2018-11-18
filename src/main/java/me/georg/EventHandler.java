@@ -76,12 +76,12 @@ public class EventHandler implements WebDriverEventListener {
 
     @Override
     public void beforeFindBy(By by, WebElement webElement, WebDriver webDriver) {
-
+        LOGGER.info("Поиск эллемента " + by);
     }
 
     @Override
     public void afterFindBy(By by, WebElement webElement, WebDriver webDriver) {
-
+        LOGGER.info("Элемент найден");
     }
 
     @Override

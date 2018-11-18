@@ -71,7 +71,7 @@ public class MainPageTest {
     private String billedFullName;
 
     private String monthToString(int intMonth) {
-        String monthString = new String();
+        String monthString = "";
         switch (intMonth) {
             case 1:
                 monthString = "January";
@@ -125,6 +125,7 @@ public class MainPageTest {
         webDriver = new ChromeDriver();
         driver = new EventFiringWebDriver(webDriver);
         driver.register(new EventHandler());
+        driver.manage().window().maximize();
         driver.get("http://newtours.demoaut.com/");
     }
 
